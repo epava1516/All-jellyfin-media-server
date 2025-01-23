@@ -1,0 +1,73 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "title": "Media Server Stack",
+      "description": "Stack completo con Gluetun, qBittorrent, Jellyfin, Sonarr, Radarr y más.",
+      "platform": "linux",
+      "logo": "https://example.com/logo.png",
+      "type": "docker-compose",
+      "repository": {
+        "url": "https://example.com/repository.git",
+        "stackfile": "docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ENDPOINT_IP",
+          "label": "IP del Endpoint VPN",
+          "default": "127.0.0.1",
+          "description": "Dirección IP del endpoint VPN."
+        },
+        {
+          "name": "WIREGUARD_ADDR",
+          "label": "Dirección de WireGuard",
+          "default": "10.0.0.2",
+          "description": "Dirección IP para el cliente WireGuard."
+        },
+        {
+          "name": "ENDPOINT_PORT",
+          "label": "Puerto del Endpoint VPN",
+          "default": "51820",
+          "description": "Puerto de conexión para el servidor VPN."
+        },
+        {
+          "name": "DNS_ADDRESS",
+          "label": "Dirección DNS",
+          "default": "1.1.1.1",
+          "description": "Dirección del servidor DNS a utilizar."
+        },
+        {
+          "name": "PUBLIC_KEY",
+          "label": "Clave Pública WireGuard",
+          "default": "",
+          "description": "Clave pública del cliente WireGuard."
+        },
+        {
+          "name": "PRIVATE_KEY",
+          "label": "Clave Privada WireGuard",
+          "default": "",
+          "description": "Clave privada del cliente WireGuard."
+        },
+        {
+          "name": "COMMON_PATH",
+          "label": "Ruta Común de Datos",
+          "default": "/mnt/data",
+          "description": "Ruta base para todos los volúmenes compartidos."
+        },
+        {
+          "name": "TZ",
+          "label": "Zona Horaria",
+          "default": "Europe/Madrid",
+          "description": "Zona horaria para los contenedores."
+        },
+        {
+          "name": "LOG_LEVEL",
+          "label": "Nivel de Logs",
+          "default": "info",
+          "description": "Nivel de registro de logs para los servicios."
+        }
+      ]
+    }
+  ]
+}
+
